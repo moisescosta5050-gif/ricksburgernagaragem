@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rick's Burger | Hamburgueria artesanal em Vila Velha</title>
+<meta name="description" content="Hamburgueria artesanal em Vila Velha com sandubas encorpadas, porções e milkshakes. Aberto todos os dias até as 23h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141210;--bg2:#1d1a17;--line:#332d27;--tx:#f3ece2;--mut:#a89d90;--amb:#ffa726;--amb2:#ff7a1a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#141210}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 Montserrat,Poppins,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--amb);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(20,18,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-weight:900;font-size:20px;color:var(--amb);text-shadow:0 0 14px rgba(255,167,38,.55)}
+nav{display:flex;gap:24px;font-weight:600;font-size:14px;color:var(--mut)}
+nav a:hover{color:var(--tx)}
+.btn{display:inline-block;background:var(--amb);color:#1a1209;font-weight:800;padding:12px 22px;border-radius:999px;border:2px solid var(--amb);cursor:pointer;font-family:inherit;font-size:15px}
+.btn:hover{background:var(--amb2);border-color:var(--amb2)}
+.btn.ghost{background:transparent;color:var(--amb)}
+.btn.ghost:hover{background:rgba(255,167,38,.12);color:var(--amb)}
+.hero{padding:88px 0 72px;text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(255,122,26,.16),transparent 62%)}
+.sign{display:inline-block;font-weight:900;font-size:clamp(46px,12vw,112px);line-height:1;margin:0;color:#ffe2b0;letter-spacing:-.02em;text-shadow:0 0 6px #ffb347,0 0 22px #ff9a2e,0 0 52px rgba(255,122,26,.7);animation:flick 5s 1 both}
+@keyframes flick{0%,18%{opacity:.35;text-shadow:none}20%,24%{opacity:1}22%{opacity:.4}100%{opacity:1}}
+.hero h1{margin:0}
+.hero p.sub{max-width:560px;margin:22px auto 30px;color:var(--mut);font-size:18px}
+.hero .tag{font-weight:800;font-size:clamp(20px,4vw,28px);margin:18px 0 0}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.meta{margin-top:30px;color:var(--mut);font-size:14px}
+.meta b{color:var(--amb)}
+section{padding:64px 0}
+h2{font-size:clamp(26px,5vw,38px);font-weight:900;margin:0 0 8px}
+.lead{color:var(--mut);margin:0 0 32px;max-width:60ch}
+.feat{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 6px;font-size:20px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.price{color:var(--amb);font-weight:800;white-space:nowrap}
+.feat .price{display:block;margin-top:14px;font-size:18px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;-webkit-overflow-scrolling:touch}
+.tab{flex:none;font:700 14px Montserrat,system-ui,sans-serif;color:var(--mut);background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--amb);border-color:var(--amb);color:#1a1209}
+.items{list-style:none;margin:0;padding:0}
+.item{display:flex;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.item h3{margin:0;font-size:18px}
+.item p{margin:4px 0 0;color:var(--mut);font-size:14px}
+.item .price{font-size:17px;text-align:right}
+.item .price small{display:block;color:var(--mut);font-weight:600;font-size:12px}
+.grp{margin-top:26px;padding-bottom:6px;border-bottom:2px solid var(--amb);color:var(--amb);font-weight:800;font-size:18px}.grp:first-child{margin-top:0}.note{color:var(--mut);font-size:14px;margin-top:16px}
+.about{background:var(--bg2);border-block:1px solid var(--line)}
+.about .wrap{max-width:720px}
+.about p{color:var(--mut);font-size:17px}
+.svc{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.svc span{border:1.5px solid var(--amb);color:var(--amb);border-radius:999px;padding:6px 16px;font-weight:700;font-size:14px}
+.loc{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.loc h3{margin:0 0 6px;color:var(--amb);font-size:16px}
+.loc p{margin:0 0 20px}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.add{flex:none;margin-top:8px;font:800 13px Montserrat,system-ui,sans-serif;background:transparent;color:var(--amb);border:1.5px solid var(--amb);border-radius:999px;padding:6px 14px;cursor:pointer}.add:hover{background:rgba(255,167,38,.12)}.right{display:flex;flex-direction:column;align-items:flex-end}#cart{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg2);border-top:2px solid var(--amb);padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:none}#cart.on{display:block}.cartbox{max-width:1040px;margin:0 auto;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}#cl{max-height:28vh;overflow:auto;margin:0 auto 10px;max-width:1040px;padding:0;list-style:none;font-size:14px}#cl li{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:4px 0}#cl .add{margin:0;min-width:34px}body.hascart{padding-bottom:150px}
+@media(max-width:700px){nav{display:none}.hero{padding-top:56px}section{padding:48px 0}}
+@media(prefers-reduced-motion:reduce){.sign{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#inicio">Rick's Burger</a>
+<nav aria-label="Principal"><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#localizacao">Localização</a></nav>
+<a class="btn pedir" href="#cardapio">Pedir agora</a>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<h1><span class="sign">Rick's Burger</span></h1>
+<p class="tag">Sanduba encorpada, noite boêmia.</p>
+<p class="sub">Hamburgueria artesanal em Vila Velha, com um espaço estilizado e descontraído para comer bem e ficar mais um pouco.</p>
+<div class="cta"><a class="btn pedir" href="#cardapio">Fazer pedido</a><a class="btn ghost" href="#cardapio">Ver cardápio</a></div>
+<p class="meta"><b>★ 4,6</b> com mais de 7.600 avaliações. Aberto todos os dias até as 23h.</p>
+</div></section>
+
+<section id="destaques"><div class="wrap">
+<h2>Os mais pedidos da casa</h2>
+<p class="lead">Burgers feitos com o blend do Rick's, pão especial e molhos da casa.</p>
+<div class="feat">
+<article class="card"><h3>Autentic Bacon</h3><p>Burger 150g, mussarela, bacon crocante, maionese de bacon, alface, tomate e cebola roxa.</p><span class="price">R$ 36,90</span></article>
+<article class="card"><h3>Rick's Kong</h3><p>Burger 150g, mussarela, catupiry, bacon crocante, ovo frito, banana frita e maionese de bacon.</p><span class="price">R$ 45,90</span></article>
+<article class="card"><h3>Double Smash Bacon</h3><p>2 burgers de 100g, dobro de cheddar, dobro de bacon crocante e maionese de bacon.</p><span class="price">R$ 42,90</span></article>
+</div></div></section>
+
+<section id="cardapio" style="padding-top:8px"><div class="wrap">
+<h2>Cardápio</h2>
+<p class="lead">Escolha a categoria, toque em Adicionar e envie o pedido pelo WhatsApp.</p>
+<div class="tabs" role="tablist" aria-label="Categorias do cardápio" id="tabs"></div>
+<ul class="items" id="items"></ul>
+<p class="note" id="note"></p>
+</div></section>
+
+<section class="about" id="sobre"><div class="wrap">
+<h2>Sobre nós</h2>
+<p>O Rick's Burger é uma hamburgueria artesanal de Vila Velha. Aqui o hambúrguer é encorpado, o blend e a maionese são da casa e o pão é especial.</p>
+<p>O espaço é estilizado e descontraído, com clima de boemia: boa pedida para o jantar, para dividir porções com os amigos ou para fechar a noite com um milkshake de 500ml.</p>
+<div class="svc"><span>Refeição no local</span><span>Para viagem</span><span>Entrega</span></div>
+</div></section>
+
+<section id="localizacao"><div class="wrap">
+<h2>Venha nos visitar</h2>
+<div class="loc" style="margin-top:28px">
+<div><h3>Endereço</h3><p>Av. Min. Salgado Filho, 1672<br>Soteco, Vila Velha - ES, 29106-010</p>
+<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.+Min.+Salgado+Filho+1672+Soteco+Vila+Velha+ES">Abrir no mapa</a> <a class="btn ghost" style="margin:0 6px 8px 0" href="tel:+552730729461">Ligar</a> <a class="btn ghost" style="margin:0 0 8px" target="_blank" rel="noopener" href="https://www.instagram.com/ricksburgernagaragem/">Instagram</a></div>
+<div><h3>Horário</h3><p>Todos os dias, até as 23:00</p><h3>Avaliação</h3><p>4,6 estrelas, com mais de 7.600 avaliações</p></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div>Av. Min. Salgado Filho, 1672 - Soteco, Vila Velha - ES · Aberto diariamente até às 23:00</div>
+<div><a href="https://www.instagram.com/ricksburgernagaragem/" target="_blank" rel="noopener">Instagram @ricksburgernagaragem</a> | <a href="tel:+552730729461">(27) 3072-9461</a></div>
+<div style="width:100%">© <span id="yr">2026</span> Rick's Burger. Todos os direitos reservados.</div>
+</div></footer>
+
+<script>
+// Para pedidos por WhatsApp, coloque o número com DDI+DDD, ex.: "5527999999999"
+var WHATSAPP = "";
+var P = function(v){return v?"R$ "+v.toFixed(2).replace(".",","):null};
+var MENU = [
+{id:"classicos",label:"Clássicos",items:[
+["PCQ",20.9,"Burger 100g, queijo cheddar fatiado e pão Rick's com gergelim."],
+["Esplêndido",22.9,"Burger 100g, cheddar derretido, cebola caramelizada e pão Rick's com gergelim."],
+["Fabuloso",26.9,"Burger 100g, queijo cheddar fatiado, alface, tomate, cebola roxa e pão Rick's com gergelim."]]},
+{id:"queridinhos",label:"Queridinhos",items:[
+["Autentic Bacon",36.9,"Burger 150g, queijo mussarela, bacon crocante, maionese de bacon, alface, tomate, cebola roxa e pão Rick's."],
+["Rick's Kong",45.9,"Burger 150g, queijo mussarela, catupiry, bacon crocante, maionese de bacon, ovo frito na manteiga, banana frita, alface, tomate, cebola roxa e pão Rick's."],
+["Magnífico",38.9,"Burger 150g, queijo mussarela, bacon crocante, maionese de bacon, cebola crispy, alface, tomate e pão Rick's."],
+["Double Smash Bacon",42.9,"2 burgers de 100g (cada), dobro de cheddar fatiado, dobro de bacon crocante, maionese de bacon, cebola, picles e pão Rick's."]]},
+{id:"monstruosos",label:"Monstruosos",items:[
+["Costela Premium",48.9,"Burger 150g, queijo mussarela, bacon crocante, costela desfiada, maionese de pão de alho, alface, tomate, cebola roxa e pão Rick's."],
+["Pulled Pork",45.9,"Burger 150g, queijo mussarela, bacon crocante, pulled pork no barbecue de goiaba, sour cream, barbecue de goiaba, alface, tomate, cebola roxa e pão Rick's."],
+["Fantástico",48.9,"2 burgers de 150g (cada), dobro de queijo mussarela, dobro de bacon crocante, maionese de bacon, alface, tomate, cebola roxa, picles e pão Rick's."],
+["Mega Brasilian",47.9,"Burger 150g, burger de linguiça 100g, ovo frito na manteiga, dobro de queijo mussarela, bacon crocante, couve crispy, banana frita, molho caipira Rick's, maionese de pão de alho, cebola roxa e pão Rick's."]]},
+{id:"especiais",label:"Especiais",items:[
+["Mr. Veggie",38.9,"Burger vegetariano (soja e alho-poró), queijo mussarela, mix de legumes cozidos e chapeados no shoyu, sour cream, banana frita e pão Rick's."],
+["Sr. Croc Chicken",38.9,"Peito de frango (crocante ou grelhado), queijo mussarela, catupiry, alface, tomate e pão Rick's."],
+["Salada Rick's",31.9,"Grill ou croc. Mix de folhas, cenoura ralada, beterraba ralada, champignon, cebola roxa, tomate cereja, picles, croutons e azeite com ervas."]]},
+{id:"fries",label:"Fries",items:[
+["#Batata crinkle"],
+["Tradicional",19.9,""],
+["Cheddar derretido e bacon",26.9,""],
+["Costela desfiada e molho 4 queijos",28.9,""],
+["Pulled pork e sour cream",25.9,""],
+["Geléia de pimenta, molho 4 queijos e bacon",29.9,""],
+["#Para beliscar"],
+["Onion Rings",22.9,"12 unidades. Escolha 2 molhos: barbecue de goiaba, ketchup de goiaba ou molho caipira."],
+["Rick's Nuggets",25.9,"12 unidades. Escolha 2 molhos: barbecue de goiaba, ketchup de goiaba ou molho caipira."]]},
+{id:"shakes",label:"Shake Rick's",items:[
+["Ninho c/ Nutella",27.9,"500ml, com chantilly."],
+["Doce de Leite Crocante",25.9,"500ml, com chantilly."],
+["Frutas Vermelhas Crunch",25.9,"500ml, com chantilly."]]},
+{id:"bebidas",label:"Bebidas",items:[
+["#Sucos (500ml)"],
+["Laranja c/ Morango",15.9,""],
+["Laranja c/ Groselha",14.9,""],
+["Laranja c/ Maracujá",15.9,""],
+["Laranja",14.9,""],
+["#Sodas (500ml)"],
+["Melancia",15.9,""],
+["Maçã Verde",15.9,""],
+["Pink Lemonade",15.9,""],
+["#Outras bebidas"],
+["Refrigerante lata",7.5,""],
+["Cerveja Longneck",12,""],
+["Água com ou sem gás",5.5,""]]}
+];
+var tabs=document.getElementById("tabs"),list=document.getElementById("items"),note=document.getElementById("note");
+function show(id){
+  var m=MENU.filter(function(x){return x.id===id})[0];
+  [].forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
+  list.innerHTML=m.items.map(function(i,n){
+    if(i[0].charAt(0)==="#")return '<li class="grp">'+i[0].slice(1)+'</li>';var pr=P(i[1]);
+    return '<li class="item"><div><h3>'+i[0]+'</h3>'+(i[2]?'<p>'+i[2]+'</p>':'')+'</div><div class="right"><span class="price">'+(pr||'<small>Consulte</small>')+'</span><button class="add" type="button" data-m="'+id+'" data-n="'+n+'" aria-label="Adicionar '+i[0]+' ao pedido">Adicionar</button></div></li>';
+  }).join("");
+  note.textContent=m.note||"";
+}
+MENU.forEach(function(m){
+  var b=document.createElement("button");
+  b.className="tab";b.type="button";b.textContent=m.label;b.dataset.id=m.id;b.setAttribute("role","tab");
+  b.onclick=function(){show(m.id)};tabs.appendChild(b);
+});
+show(MENU[0].id);
+var cart={};
+function find(id,n){return MENU.filter(function(x){return x.id===id})[0].items[n]}
+document.body.insertAdjacentHTML("beforeend",'<div id="cart" aria-live="polite"><ul id="cl"></ul><div class="cartbox"><strong id="ct"></strong><button class="btn" id="send" type="button">Enviar pedido no WhatsApp</button></div></div>');
+var cl=document.getElementById("cl"),ct=document.getElementById("ct"),cartEl=document.getElementById("cart");
+function draw(){
+ var keys=Object.keys(cart),total=0,qty=0,unp=false;
+ cl.innerHTML=keys.map(function(k){var c=cart[k];qty+=c.q;if(c.p)total+=c.p*c.q;else unp=true;
+  return '<li><span>'+c.q+'x '+c.n+'</span><span><button class="add" data-k="'+k+'" data-d="-1" type="button" aria-label="Remover um">-</button> <button class="add" data-k="'+k+'" data-d="1" type="button" aria-label="Adicionar mais um">+</button></span></li>'}).join("");
+ cartEl.className=keys.length?"on":"";document.body.className=keys.length?"hascart":"";
+ ct.textContent=qty+(qty===1?" item":" itens")+(total?" | Total: "+P(total):"")+(unp?" + itens a consultar":"");
+}
+list.addEventListener("click",function(e){var b=e.target.closest(".add");if(!b)return;var i=find(b.dataset.m,+b.dataset.n),k=b.dataset.m+b.dataset.n;cart[k]=cart[k]||{n:i[0],p:i[1],q:0};cart[k].q++;draw()});
+cl.addEventListener("click",function(e){var b=e.target.closest(".add");if(!b)return;var k=b.dataset.k;cart[k].q+=+b.dataset.d;if(cart[k].q<1)delete cart[k];draw()});
+document.getElementById("send").onclick=function(){
+ var t="Olá! Quero fazer um pedido no Rick's Burger:\n",total=0;
+ Object.keys(cart).forEach(function(k){var c=cart[k];t+="- "+c.q+"x "+c.n+(c.p?" ("+P(c.p*c.q)+")":" (preço a confirmar)")+"\n";if(c.p)total+=c.p*c.q});
+ if(total)t+="\nTotal parcial: "+P(total);
+ window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t),"_blank","noopener");
+};
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+</script>
+</body>
+</html>
